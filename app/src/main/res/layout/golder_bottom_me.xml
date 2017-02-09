@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+     <!--顶部登录名头像-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/top_bar_bg"
+        android:orientation="vertical"
+        android:gravity="center"
+       >
+      <ImageView
+          android:id="@+id/image_top_me_headpic"
+          android:layout_gravity="center"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@drawable/logo_go_on"
+          />
+        <TextView
+            android:id="@+id/text_top_me_headname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="未登录"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+    <!--整个中间部分布局-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/basement_bg">
+        <!--第二部分 嵌套水平布局-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            >
+
+            <!-- 嵌套垂直布局-->
+            <!--优惠券-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:layout_weight="1"
+                android:layout_marginRight="50dp"
+
+               >
+
+   <ImageView
+    android:id="@+id/image_me_coupon"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/image_me_coupon"
+    android:layout_marginLeft="2dp"
+       />
+
+   <TextView
+    android:id="@+id/text_me_coupon"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/text_me_coupon"
+    android:textSize="12sp"
+
+
+    />
+     </LinearLayout>
+
+
+            <!--购物卡布局-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:layout_weight="1"
+
+                >
+
+                <ImageView
+                    android:id="@+id/image_me_shoppingcars"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/image_me_shoppingcard"
+
+                    />
+
+                <TextView
+                    android:id="@+id/text_me_shoppingcard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_me_shoppingcard"
+                    android:textSize="12sp"
+
+
+                    />
+            </LinearLayout>
+
+            <!--签到布局-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:layout_weight="1"
+                >
+
+                <ImageView
+                    android:id="@+id/image_me_sign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/image_me_sign"
+
+
+                    />
+
+                <TextView
+                    android:id="@+id/text_me_sign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_me_sign"
+                    android:textSize="12sp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="2dp"
+
+                    />
+            </LinearLayout>
+
+            <!--收藏布局-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                >
+
+                <ImageView
+                    android:id="@+id/image_me_collection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/image_me_collection"
+
+
+                    />
+
+                <TextView
+                    android:id="@+id/text_me_collection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_me_collection"
+                    android:textSize="12sp"
+                    android:layout_marginLeft="3dp"
+
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:background="@color/me_line"/>
+
+  <include
+      layout="@layout/golder_me_middle_content"/>
+
+</LinearLayout>
+
+
+</LinearLayout>

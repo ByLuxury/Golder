@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="@drawable/market_show_top"
+        android:orientation="vertical"
+
+        >
+<!--顶部返回 店铺名字 ，收藏按钮布局-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+            <ImageView
+                android:id="@+id/image_return_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_left"
+                android:layout_alignParentLeft="true"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_left_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_name_line"
+                    android:textColor="@color/white_bg"
+                    android:layout_weight="1"/>
+<!--超市名字-->
+
+                <TextView
+                android:id="@+id/text_market_show_name"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                 android:layout_gravity="center"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:textColor="@color/white_bg"
+                />
+
+            <TextView
+                android:id="@+id/text_right_line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_name_line"
+                android:textColor="@color/white_bg"
+                android:layout_weight="1"/>
+            </LinearLayout>
+
+            <!--收藏按钮-->
+            <ImageButton
+                android:id="@+id/imagebutton_market_show_collection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+               android:background="@drawable/market_show_collection_normal"/>
+
+
+        </RelativeLayout>
+<!--中间显示超市电信和公告信息布局-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <ImageView
+                android:id="@+id/image_market_show_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="35dp"
+                android:src="@drawable/home_ykl_market_show"/>
+
+            <TextView
+                android:id="@+id/text_market_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="电话：023-58332343"
+                android:textColor="@color/white_bg"
+                android:layout_toRightOf="@id/image_market_show_name"
+                android:layout_marginTop="8dp"
+                />
+
+            <TextView
+                android:id="@+id/text_market_notice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="公告：暂无"
+                android:textColor="@color/white_bg"
+                android:layout_toRightOf="@id/image_market_show_name"
+                android:layout_below="@id/text_market_number"
+                />
+
+         </RelativeLayout>
+<!--分割线-->
+        <View
+           android:layout_width="match_parent"
+           android:layout_height="0.8dp"
+           android:background="@color/me_line"
+            android:layout_marginTop="5dp"
+           android:layout_marginLeft="35dp"
+           android:layout_marginRight="35dp"/>
+
+    </LinearLayout>
+<!--底下商品展示布局-->
+
+
+<!--显示分类信息的ListView，设置权重，占一份-->
+
+ <!--   <ListView
+        android:layout_gravity="center"
+        android:fastScrollEnabled="false"
+        android:id="@+id/lv_left_goods_category"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/left_list"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/user_center_divide_line"
+        android:dividerHeight="1px"
+        android:listSelector="#00000000"
+        android:scrollbars="none" />
+-->
+
+    <!--显示各种商品的ListView-->
+
+<!--
+
+    <com.zhoushuai.myapplication.PinnedHeaderListView
+        android:id="@+id/lv_right_goods_category"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:background="#fff"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/user_center_divide_line"
+        android:dividerHeight="0.5px"
+        android:listSelector="#00000000" />
+</LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/layout_selected_shooping"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/selected_shooping_bg_grey"
+       >
+
+<ImageView
+    android:id="@+id/image_selected_shopping"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:layout_marginLeft="15dp"
+    android:src="@drawable/shopping_cart_noselect"/>
+    <ImageView
+        android:id="@+id/icon_money"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/shopping_selected_icon_money"
+        android:layout_toRightOf="@id/image_selected_shopping"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="7dp"/>
+        <TextView
+            android:id="@+id/text_shopping_selected_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="18sp"
+            android:layout_toRightOf="@id/icon_money"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="7dp"
+            android:textColor="@color/selected_shopping_font_bg"/>
+     <Button
+         android:id="@+id/btn_selected_shopping"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentEnd="true"
+         android:layout_marginRight="13dp"
+         android:textSize="18sp"
+         android:background="@color/selected_shooping_bg_grey"
+         android:textColor="@color/selected_shopping_font_bg"
+         android:text="@string/text_selected_shopping_show"/>
+
+    </RelativeLayout>
+-->
+    <!--用针布局控制点击购物车时弹出的视图 默认隐藏-->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:background="@color/consumer_bg"
+            android:visibility="gone"
+            android:layout_weight="1"
+            android:id="@+id/noData"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:text="暂无更多数据"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+
+        <RelativeLayout
+            android:id="@+id/parentLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/toolBar"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ListView
+                    android:layout_gravity="center"
+                    android:fastScrollEnabled="false"
+                    android:id="@+id/lv_left_goods_category"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/left_list"
+                    android:cacheColorHint="#00000000"
+                    android:divider="@color/user_center_divide_line"
+                    android:dividerHeight="1px"
+                    android:listSelector="#00000000"
+                    android:scrollbars="none" />
+
+              <marketshow.zhoushuai.golder.PinnedHeaderListView
+                    android:id="@+id/lv_right_goods_show"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="#fff"
+                    android:cacheColorHint="#00000000"
+                    android:divider="@color/user_center_divide_line"
+                    android:dividerHeight="0.5px"
+                    android:listSelector="#00000000" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/toolBar"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:orientation="horizontal">
+
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="2"
+                    android:background="@color/user_center_black_text"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/image_shopping_cart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:paddingBottom="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="5dp"
+                        android:src="@drawable/shopping_cart_noselect" />
+
+                    <!--加入购物车中的数目，购物车右上角的显示-->
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/shoppingNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@id/image_shopping_cart"
+                        android:layout_alignTop="@id/image_shopping_cart"
+                        android:background="@drawable/shape_shopping_cart"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="8dp" />
+
+                    <TextView
+                        android:id="@+id/shoppingPrise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@id/image_shopping_cart"
+                        android:textColor="@color/white"
+                        android:text="¥ 0.00"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/settlement"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/shopping_cart_bg"
+                    android:gravity="center"
+                    android:text="@string/text_selected_shopping_show"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <!--隐藏的购物车列表,点击购物车后出现-->
+            <FrameLayout
+                android:visibility="gone"
+                android:id="@+id/cardLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_above="@id/toolBar"
+                android:orientation="vertical">
+
+                 <!--点击购物车图标后，设置上面一层布局的背景为灰色-->
+                <View
+                    android:visibility="gone"
+                    android:id="@+id/bg_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2"
+                    android:background="#a0000000" />
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/cardShopLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="160dp"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/window_shopping_cart_bg"
+                        android:paddingBottom="6dp"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="6dp"
+                        android:text="@string/bottom_tab_shopping"
+                        android:textColor="@color/black" />
+
+                    <!--底部弹起视图布局-->
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:background="@color/consumer_bg">
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/defaultText"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="当前购物车为空快去选购吧！"
+                            android:textSize="13sp" />
+
+                        <!--当添加东西到购物车后,点击购物车图标 弹出窗口 显示当前所买的商品-->
+                        <ListView
+                            android:cacheColorHint="#00000000"
+                            android:divider="@color/user_center_divide_line"
+                            android:dividerHeight="1px"
+                            android:listSelector="#00000000"
+                            android:id="@+id/shopproductListView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                        </ListView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+        </RelativeLayout>
+
+
+    </FrameLayout>
+
+
+</LinearLayout>

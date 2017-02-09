@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zhoushuai.golder.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/realtive_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <!--底部-->
+        <LinearLayout
+            android:id="@+id/linear_bottom_tab"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_alignParentBottom="true"
+            android:baselineAligned="true">
+
+            <RelativeLayout
+                android:id="@+id/relative_bottom_tab_home"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+                <ImageView
+                    android:id="@+id/image_bottom_tab_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/bottom_tab_home_normal"/>
+                <TextView
+                    android:id="@+id/text_bottom_tab_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bottom_tab_home"
+                    android:textSize="12sp"
+                    android:layout_marginTop="3dp"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/text_bottom_tab_normal"
+                    android:layout_below="@id/image_bottom_tab_home"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_bottom_tab_order"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                >
+                <ImageView
+                    android:id="@+id/image_bottom_tab_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/bottom_tab_order_normal"/>
+                <TextView
+                    android:id="@+id/text_bottom_tab_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bottom_tab_order"
+                    android:textSize="12sp"
+                    android:layout_marginTop="3dp"
+                    android:textColor="@color/text_bottom_tab_normal"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/image_bottom_tab_order"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/relative_bottom_tab_shopping"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+                <ImageView
+                    android:id="@+id/image_bottom_tab_shopping"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/bottom_tab_shopping_normal"/>
+                <TextView
+                    android:id="@+id/text_bottom_tab_shopping"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bottom_tab_shopping"
+                    android:textSize="12sp"
+                    android:layout_marginTop="3dp"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/text_bottom_tab_normal"
+                    android:layout_below="@id/image_bottom_tab_shopping"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/relative_bottom_tab_me"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+                <ImageView
+                    android:id="@+id/image_bottom_tab_me"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/bottom_tab_me_normal"/>
+                <TextView
+                    android:id="@+id/text_bottom_tab_me"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bottom_tab_me"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="12sp"
+                    android:layout_marginTop="3dp"
+                    android:textColor="@color/text_bottom_tab_normal"
+                    android:layout_below="@id/image_bottom_tab_me"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+<!--中间部分-->
+        <LinearLayout
+            android:id="@+id/linear_middle_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_above="@+id/line"
+            android:layout_below="@+id/realtive_top_tab">
+        </LinearLayout>
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:layout_above="@id/linear_bottom_tab"
+            android:background="@color/line" />
+    </RelativeLayout>
+
+</FrameLayout>

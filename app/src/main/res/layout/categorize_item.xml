@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:background="@color/left_list"
+    android:layout_height="55dp"
+    android:id="@+id/mainitem_txt"
+    android:text="商品分类"
+    android:textColor="#000000"
+    android:textSize="14sp"
+    android:orientation="horizontal" >
+<!--左边分类标题显示样式-->
+
+</TextView>
